@@ -11,7 +11,7 @@ export default function RegisterPage() {
   async function handleRegister(event) {
     event.preventDefault();
     try {
-      await axios.post(`http://localhost:3000/register`, {
+      await axios.post(`https://chat-api.simson.id/register`, {
         name,
         userName,
         password,
