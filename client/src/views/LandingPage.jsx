@@ -9,7 +9,7 @@ export default function LandingPage() {
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             <a href="#" className="flex items-center">
               <img
-                src="../src/assets/logo-chatsync.png"
+                src="https://storage.googleapis.com/chat-storage-123/logo-chatsync.png"
                 width="150"
                 height="150"
                 alt="Landwind Logo"
@@ -82,7 +82,7 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="../src/assets/hero.png" alt="hero image" />
+            <img src="https://storage.googleapis.com/chat-storage-123/hero.png" alt="hero image" />
           </div>
         </div>
       </section>
