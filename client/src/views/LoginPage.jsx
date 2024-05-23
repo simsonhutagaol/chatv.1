@@ -10,7 +10,7 @@ export default function LoginPage() {
   async function handleLogin(event) {
     event.preventDefault();
     try {
-      let { data } = await axios.post(`http://localhost:3000/login`, {
+      let { data } = await axios.post(`https://chat-api.simson.id/login`, {
         userName,
         password,
       });
