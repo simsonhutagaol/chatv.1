@@ -92,7 +92,20 @@ export default function Sidebar({ socket }) {
           return e;
         })
       );
+      
+      setUsersList((usersList) => {
+        const isExists = usersList.some((u) => u.username === user.username);
+        if (!isExists) {
+          user.online = true;
+          user.self = false;
+          return [...usersList, user];
+        } else {
+          return usersList;
+        }
+      });
+      
     };
+    
     const handleUserDisconnected = (user) => {
       setUsersList((usersList) =>
         usersList.map((e) => {
