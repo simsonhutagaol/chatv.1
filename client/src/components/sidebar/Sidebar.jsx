@@ -121,7 +121,7 @@ export default function Sidebar({ socket }) {
         <div>
           <img
             className="flex justify-center items-center m-auto h-20"
-            src="../../src/assets/logo-chatsync.png"
+            src="https://storage.googleapis.com/chat-storage-123/logo-chatsync.png"
             alt="logo"
           />
         </div>
