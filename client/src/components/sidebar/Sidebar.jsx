@@ -24,7 +24,6 @@ export default function Sidebar({ socket }) {
     socket.on("users", async (users) => {
       try {
         users.forEach((user) => {
-          console.log(user.username, "IN SOCKET 0");
           user.self = user.userID === socket.id;
         });
 
@@ -36,11 +35,9 @@ export default function Sidebar({ socket }) {
           let isSocketExists = false;
           let userSocket = {};
           for (let j = 0; j < users.length; j++) {
-            console.log(users[j].username, "IN SOCKET loop");
             let tempSocketUser = users[j];
 
             if (tempSocketUser.username == dbUser.userName) {
-              console.log(tempSocketUser, "IN SOCKET 1");
               isSocketExists = true;
               userSocket = tempSocketUser;
               break;
@@ -56,7 +53,6 @@ export default function Sidebar({ socket }) {
           };
 
           if (isSocketExists) {
-            console.log(tempUser.username, "IN SOCKET");
             tempUser.userID = userSocket.userID;
             tempUser.username = userSocket.username;
             tempUser.key = userSocket.key;
@@ -74,7 +70,6 @@ export default function Sidebar({ socket }) {
           return a.username > b.username ? 1 : 0;
         });
         setUsersList(finalUserList);
-        console.log(finalUserList, "akhir");
       } catch (err) {
         console.log(err);
       }
@@ -92,7 +87,7 @@ export default function Sidebar({ socket }) {
           return e;
         })
       );
-      
+
       setUsersList((usersList) => {
         const isExists = usersList.some((u) => u.username === user.username);
         if (!isExists) {
@@ -103,9 +98,9 @@ export default function Sidebar({ socket }) {
           return usersList;
         }
       });
-      
+
     };
-    
+
     const handleUserDisconnected = (user) => {
       setUsersList((usersList) =>
         usersList.map((e) => {
