@@ -1,6 +1,7 @@
 
 ### Real Time Chat App
 ### Chatsync
+- https://chatsync.simson.id/
 Chatsync is a real-time chat application or web platform that enables users to communicate directly with each other. Each user can send and receive messages to and from other users, provided both users are online.
 ## Technologies Used:
 - Node.js: Used as the JavaScript runtime environment to run the application server.
